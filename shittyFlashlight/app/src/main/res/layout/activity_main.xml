@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="assign1.alkhanishvili.davit.shittyflashlight.MainActivity"
+    android:id="@+id/backGround">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="bottom"
+        android:layout_alignParentEnd="false"
+        >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R"
+        android:id="@+id/buttonR"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:onClick="onClick" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B"
+        android:id="@+id/buttonB"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:onClick="onClick" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="W"
+        android:id="@+id/buttonW"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:onClick="onClick" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="G"
+        android:id="@+id/buttonG"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:onClick="onClick" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Y"
+        android:id="@+id/buttonY"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:onClick="onClick" />
+    </LinearLayout>
+</RelativeLayout>
