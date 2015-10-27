@@ -10,36 +10,49 @@ import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private RelativeLayout backGround;
+    int color=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         backGround = (RelativeLayout) findViewById(R.id.backGround);
-
+        if (savedInstanceState !=null)
+        backGround.setBackgroundColor(savedInstanceState.getInt("save color"));
     }
 
         public void onClick(View v) {
 
             switch (v.getId()) {
                 case R.id.buttonB:
-                    backGround.setBackgroundColor(getResources().getColor(R.color.blue));
+                    color=getResources().getColor(R.color.blue);
+                    backGround.setBackgroundColor(color);
                     break;
                 case R.id.buttonG:
-                    backGround.setBackgroundColor(getResources().getColor(R.color.green));
+                    color=getResources().getColor(R.color.green);
+                    backGround.setBackgroundColor(color);
                     break;
                 case R.id.buttonY:
-                    backGround.setBackgroundColor(getResources().getColor(R.color.yellow));
+                    color=getResources().getColor(R.color.yellow);
+                    backGround.setBackgroundColor(color);
                     break;
                 case R.id.buttonW:
-                    backGround.setBackgroundColor(getResources().getColor(R.color.white));
+                    color=getResources().getColor(R.color.white);
+                    backGround.setBackgroundColor(color);
                     break;
                 case R.id.buttonR:
-                    backGround.setBackgroundColor(getResources().getColor(R.color.red));
+                    color=getResources().getColor(R.color.red);
+                    backGround.setBackgroundColor(color);
                     break;
                 default:
                     break;
             }
         }
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt("save color",color);
+
+    }
 
 }
