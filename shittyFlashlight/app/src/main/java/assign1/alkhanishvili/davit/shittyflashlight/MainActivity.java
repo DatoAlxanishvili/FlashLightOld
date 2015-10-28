@@ -1,11 +1,9 @@
 package assign1.alkhanishvili.davit.shittyflashlight;
 
-import android.content.DialogInterface;
-import android.content.pm.ActivityInfo;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -17,8 +15,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         backGround = (RelativeLayout) findViewById(R.id.backGround);
-        if (savedInstanceState !=null)
+        if (savedInstanceState !=null){
         backGround.setBackgroundColor(savedInstanceState.getInt("save color"));
+        color=savedInstanceState.getInt("save color");}
     }
 
         public void onClick(View v) {
@@ -45,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     backGround.setBackgroundColor(color);
                     break;
                 default:
+                    backGround.setBackgroundColor(color);
                     break;
             }
         }
